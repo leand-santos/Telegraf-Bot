@@ -2,10 +2,12 @@ const bot = require('../../bot')
 const List = require('../../models/List')
 
 module.exports = bot.command(['newList', 'newlist'], async (ctx) => {
-    const [command, name, description] = ctx.message.text.split(' ')
+    const [command, name, ...description] = ctx.message.text.split(' ')
 
     if (!name)
         return ctx.reply('You must provide a name for the list')
+
+    const formattedDescription = description.join(' ')
 
     const list = await List.findOne({ name })
 
@@ -15,7 +17,7 @@ module.exports = bot.command(['newList', 'newlist'], async (ctx) => {
 
     const newList = new List({
         name,
-        description
+        description: formattedDescription
     })
 
     await newList.save()

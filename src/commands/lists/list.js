@@ -12,8 +12,8 @@ module.exports = bot.command('list', async (ctx) => {
     if (!list)
         return ctx.reply('List not found')
 
-    let response = `*${list.name}*\n\n`
-    response += list.description ? `_${list.description}_\n` : ''
+    let response = `*${list.name}*\n`
+    response += list.description ? `_${list.description}_\n\n` : ''
 
     let items = ''
 
