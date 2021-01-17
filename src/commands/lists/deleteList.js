@@ -1,7 +1,7 @@
 const bot = require('../../bot')
 const List = require('../../models/List')
 
-module.exports = bot.command('deleteList', async (ctx) => {
+module.exports = bot.command(['deleteList', 'deletelist'], async (ctx) => {
     const [command, name] = ctx.message.text.split(' ')
 
     if (!name)

@@ -12,5 +12,3 @@ mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTop
     .then(() => bot.launch())
     .then(() => console.log('Bot is online'))
     .catch((e) => console.log(e))
-
-
