@@ -13,9 +13,13 @@ module.exports = bot.command('dice', ctx => {
     fixedNumberOfDices = fixedNumberOfDices > 0 ? (fixedNumberOfDices <= 50 ? fixedNumberOfDices : 50) : 1
 
     let result = ''
+    let resultSum = 0
 
-    for (let i = 0; i < fixedNumberOfDices; i++)
-        result += `${Math.floor(Math.random() * fixedDiceSides) + 1} `
+    for (let i = 0; i < fixedNumberOfDices; i++) {
+        let randomNumber = Math.floor(Math.random() * fixedDiceSides) + 1
+        result += `${randomNumber} `
+        resultSum += randomNumber
+    }
 
-    ctx.reply(`The result of rolling ${fixedNumberOfDices} dices from ${fixedDiceSides} sides is:\n${result}`)
+    ctx.reply(`The result of ${fixedNumberOfDices} D${fixedDiceSides} rolls is:\n${result}\n\nTotal: ${resultSum}`)
 })
