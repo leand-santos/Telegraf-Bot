@@ -10,7 +10,7 @@ module.exports = bot.command('dice', ctx => {
     let fixedNumberOfDices = parseInt(numberOfDices)
 
     fixedDiceSides = fixedDiceSides > 0 ? (fixedDiceSides <= 1000 ? fixedDiceSides : 1000) : 1
-    fixedNumberOfDices = fixedNumberOfDices > 0 ? (fixedNumberOfDices <= 10 ? fixedNumberOfDices : 10) : 1
+    fixedNumberOfDices = fixedNumberOfDices > 0 ? (fixedNumberOfDices <= 50 ? fixedNumberOfDices : 50) : 1
 
     let result = ''
 
