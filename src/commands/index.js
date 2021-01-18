@@ -7,6 +7,7 @@ const deleteList = require('./lists/deleteList')
 const insertItem = require('./lists/insertItem')
 const deleteItems = require('./lists/deleteItems')
 const messages = require('./messages')
+const dice = require('./dice')
 
 module.exports = {
     start,
@@ -17,5 +18,6 @@ module.exports = {
     deleteList,
     insertItem,
     deleteItems,
-    messages
+    messages,
+    dice
 }

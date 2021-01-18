@@ -3,7 +3,8 @@ const bot = require('../bot')
 const helpMessage = 'Hi! I am Pyramid bot and this is my command list:\n' +
     'Parameter with [] are required and with <> are not required\n\n' +
     '/start - Check if I am alive\n' +
-    '/help - Commands documentation\n\n' +
+    '/help - Commands documentation\n' +
+    '/dice [diceSides] <numberOfDices> - Roll dices\n\n' +
     '- List commands\n\n' +
     '/newList [list_name] <list_description> - Create an empty list\n' +
     '/lists <list_name> - Show all lists or a specific list\n' +
